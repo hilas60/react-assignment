@@ -1,3 +1,16 @@
 .c-Gallery {
-
+  column-count: 4;
+//   row-gap: 10px;
+  width: 100%;
+  figure {
+    margin: 10px 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+.no-photos-text {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
 }

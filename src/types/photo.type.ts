@@ -3,6 +3,7 @@ interface Media {
 }
 
 export interface Photo {
+  id: string;
   title: string;
   link: string;
   media: Media;

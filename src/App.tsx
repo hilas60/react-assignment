@@ -17,6 +17,7 @@ function App () {
       <Routes>
         <Route path="/" element={<GalleryRoute />} />
         <Route path="/photo/:id" element={<PhotoRoute />} />
+        <Route path="/author/:id" element={<GalleryRoute />} />
       </Routes>
     </div>
   )
