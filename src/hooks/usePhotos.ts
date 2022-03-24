@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { photosSelector } from '../redux/selectors/photos.selectors'
 import { useEffect } from 'react'
-import { fetchPhotos } from '../redux/actions/photos.actions'
+import { fetchPhotos, setIsFetching } from '../redux/actions/photos.actions'
 
-export const usePhotos = () => {
+export const usePhotos = (authorId:string) => {
   const dispatch = useDispatch()
   const { photos, isFetching } = useSelector(photosSelector)
 
   useEffect(() => {
-    dispatch(fetchPhotos())
+    setIsFetching(dispatch, true)
+    fetchPhotos(dispatch, authorId)
   }, [])
 
   return {
